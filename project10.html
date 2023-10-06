@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <title>Changing Button text on hovering using localStorage</title> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content= 
+          "width=device-width, initial-scale=1.0"> 
+    <style> 
+        @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500&display=swap'); 
+        * { 
+            margin: 0px; 
+            padding: 0px; 
+            font-family: 'Zilla Slab', serif; 
+        } 
+        section { 
+            position: absolute; 
+            width: 100%; 
+            height: 100%; 
+            right: 0px; 
+            bottom: 0px; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+        } 
+        #containers { 
+            text-align: center; 
+            border: 2px solid green; 
+            height: 52vh; 
+            width: 29vw; 
+            display: flex; 
+            justify-content: center; 
+            flex-direction: column; 
+            background-color: cornsilk; 
+        } 
+        section p { 
+            font-weight: 400; 
+        } 
+        /* Designing Button */ 
+        #btn { 
+            margin-top: 12px; 
+        } 
+        button { 
+            padding: 7px; 
+            border: 1px solid black; 
+            border-radius: 3px; 
+            cursor: pointer; 
+            font-weight: 500; 
+        } 
+        button:hover { 
+            transition: 1s; 
+            background-color: rgb(226, 226, 228); 
+        } 
+    </style> 
+</head> 
+  
+<body> 
+    <section id="btn-container"> 
+        <div id="containers"> 
+            <p id="para-id"> 
+               Click the Button to change the Button text 
+            </p> 
+  
+            <div id="btn"> 
+                <button id="btn-design">CLICK NOW</button> 
+            </div> 
+        </div> 
+    </section> 
+</body> 
+<script src="script.js"></script> 
+</html>
