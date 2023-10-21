@@ -1,19 +1,11 @@
-function validate(input) {
-
-    var validityState_object = input.validity;
+function validateEmail(sEmail) {
+    var reEmail = /^(?:[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+\.)*[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+@(?:(?:(?:[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!\.)){0,61}[a-zA-Z0-9]?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!$)){0,61}[a-zA-Z0-9]?)|(?:\[(?:(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\.){3}(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\]))$/;
   
-    console.log(validityState_object)
-  
-    if (validityState_object.typeMismatch) {
-      input.setCustomValidity('Thats not an email!');
-      input.reportValidity();
-    } else {
-      input.setCustomValidity('');
-      input.reportValidity();
+    if(!sEmail.match(reEmail)) {
+      alert("Invalid email address");
+      return false;
     }
-  }
   
-  document.querySelector('#email').addEventListener('blur', e =>
-    validate(e.target)
-  )
-  <input type="email" value="" id="email">
+    return true;
+  
+  }
